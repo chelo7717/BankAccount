@@ -24,7 +24,7 @@ export class BankAccount {
   }
 
   get balance() {
-    
+    return 0;
   }
 }
 

@@ -12,6 +12,7 @@ export class BankAccount {
   open() {
     if(this.estado == 0){
       this.estado=1;
+      this.total=0;
     }else{
       throw new ValueError;
     }

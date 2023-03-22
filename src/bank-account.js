@@ -18,7 +18,12 @@ export class BankAccount {
   }
 
   deposit(amount) {
-    this.total += amount
+    if(this.estado == 1){
+      this.total += amount
+    }
+    if(this.estado == 0){
+      throw new ValueError;
+    }
   }
 
   withdraw(subtract) {

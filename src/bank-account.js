@@ -39,12 +39,18 @@ export class BankAccount {
   }
 
   withdraw(subtract) {
-    if(this.estado == 1){
-      this.total -= subtract;
-    }
-    if(this.estado == 0){
+    if(subtract>this.total){
       throw new ValueError;
     }
+    else{
+      if(this.estado == 1){
+        this.total -= subtract;
+      }
+      if(this.estado == 0){
+        throw new ValueError;
+      }
+    }
+    
     
   }
 

@@ -33,7 +33,7 @@ export class BankAccount {
     if(this.estado == 1){
       this.total += amount
     }
-    if(this.estado == 0){
+    if(this.estado == 0 || amount<0){
       throw new ValueError;
     }
   }
@@ -50,8 +50,6 @@ export class BankAccount {
         throw new ValueError;
       }
     }
-    
-    
   }
 
   get balance() {
